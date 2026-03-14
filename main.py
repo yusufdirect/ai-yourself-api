@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from transformers import GPT2Tokenizer
+from transformers import AutoTokenizer
 
 app = FastAPI()
 
@@ -9,6 +9,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://yusuf.direct",
+        "https://www.yusuf.direct",
         "http://localhost:3000",
         "http://127.0.0.1:5500"
     ],
@@ -17,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 class TokenizeRequest(BaseModel):
     text: str
