@@ -31,6 +31,8 @@ def root():
 def tokenize_text(req: TokenizeRequest):
     text = req.text.strip()
 
+    print(f"HUMAN TOKENIZED: {text}")
+
     if not text:
         return {
             "text": "",
