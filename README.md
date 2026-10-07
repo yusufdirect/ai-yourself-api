@@ -1,5 +1,7 @@
 # AI Yourself API
 
+https://yusuf.direct/work/ai-yourself
+
 Backend API for **AI Yourself**, a project exploring how GPT-2 represents names through tokenization.
 
 Instead of asking whether a language model understands you, the API exposes one of the first operations it performs: breaking text into tokens.
